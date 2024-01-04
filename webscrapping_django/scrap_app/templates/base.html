@@ -4,13 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Document</title>
 </head>
 <body>
+    <div class="navbar">
+        <h3>Track Project</h3>
+
+        <form action="{% url 'scrapping' %}" method="post" class="form">
+            {% csrf_token %}
+            <input type="text" name="search" placeholder="search">
+            <button class="button" type="submit" name="action">
+                Send
+            </button>
+        </form>
+    </div>
+    <div class="card-wrapper">
     {% for post in post_data %}
-        <h3>{{post.0}}</h3>
-        <img src="{{post.1}}" alt="">
-        <h4>{{post.2}}</h4>
+        <div class="card">
+            <img src="{{post.1}}" alt="">
+            <h3>{{post.0|slice:":15"}}...</h3>
+            <h4>{{post.2}}</h4>
+        </div>
     {% endfor %}
+    </div>
 </body>
 </html>
