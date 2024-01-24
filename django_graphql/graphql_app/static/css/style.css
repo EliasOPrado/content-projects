@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 93vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+    width: 280px;
+}
+
+label {
+    display: none;
+}
+
+.title, .author, .genre {
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 2px solid #BEBEBE;
+}
+
+.description {
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 2px solid #BEBEBE;
+}
+
+.button {
+    margin-top: 10px;
+    background-color: #FFB86C;
+    border: 2px solid #FFB86C;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+}
+
+.button:hover {
+    background-color: #fdc890;
+    border: 2px solid #fdd8b0;
+}

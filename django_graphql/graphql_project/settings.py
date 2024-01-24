@@ -69,6 +69,10 @@ TEMPLATES = [
     },
 ]
 
+GRAPHENE = {
+    "SCHEMA": "graphql_app.api.schema.schema"
+}
+
 WSGI_APPLICATION = 'graphql_project.wsgi.application'
 
 
