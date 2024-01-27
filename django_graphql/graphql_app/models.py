@@ -8,6 +8,7 @@ class Book(models.Model):
         ('Science Fiction', 'Science Fiction'),
         ('Mystery', 'Mystery'),
         ('Fantasy', 'Fantasy'),
+        ('Business', 'Business'),
     ]
     title = models.CharField(max_length=120)
     author = models.ForeignKey("auth.User", on_delete=models.CASCADE)
