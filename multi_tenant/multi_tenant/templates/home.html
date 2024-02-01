@@ -4,14 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'js/styles.css' %}"></script>
+    <style>
+        .navbar {
+            background-color: {{tenant.color}};
+        }
+    </style>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>Document</title>
 </head>
 <body>
-    <h1>{{ tenant.name }}</h1>
-
-    {% for member in members %}
-        <p>{{ member.name }}</p>
-    {% endfor%}
+    <div class="navbar">
+        <p class="nav-icon-text">{{ tenant.name }}</p>
+    </div>
+    
+    <div class="main">
+        {% for member in members %}
+        <div class="card">
+            <h3>{{ member.name }}</h3>
+            <p>{{ member.age }} years old</p>
+            <p>{{ member.email }}</p>
+            <div class="bio">
+                <p>{{ member.bio }}</p>
+            </div>
+        </div>
+        {% endfor%}
+    </div>
+    
 </body>
 
 </html>
