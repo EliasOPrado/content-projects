@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from booking_calendar.views import calendar_view, add_booking, update_available_days, availability_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', availability_view, name='availability'),
+    path('calendar/', calendar_view, name='calendar_view'),
+    path('add_booking/', add_booking, name='add_booking'),
+    path('update_available_days/', update_available_days, name='update_available_days'),
 ]

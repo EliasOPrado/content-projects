@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class CelendarConfig(AppConfig):
+class BookingCalendarConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'celendar'
+    name = 'booking_calendar'

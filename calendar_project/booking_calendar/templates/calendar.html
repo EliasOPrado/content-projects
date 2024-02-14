@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Booking Calendar</h2>
+    <table>
+        <!-- Render your calendar here -->
+        {% calendar calendar 'month' %}
+    </table>
+    
+    <a href="{% url 'add_booking' %}">Add Booking</a>
+    <a href="{% url 'update_available_days' %}">Update Available Days</a>
+</body>
+</html>
