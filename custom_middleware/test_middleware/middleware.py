@@ -4,11 +4,6 @@ import time
 
 from django.conf import settings
 
-from django.conf import settings
-import requests
-
-from django.conf import settings
-import requests
 
 class LoggingMiddleware:
     def __init__(self, get_response):
